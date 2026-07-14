@@ -1,4 +1,4 @@
-# DummyJSON API — QA Automation Package
+# DummyJSON API 
 
 This package extends the Postman collection with everything needed to run it
 as a real, professional regression suite: CI/CD, HTML reporting, schema
