@@ -21,7 +21,7 @@ This project is split into three deliverables, each covering a different stage o
 
 ## 1. Test Plan
 
-**File:** `DummyJSON_QA_Test_Plan.docx`
+File: [DummyJSON_QA_Test_Plan.docx](./DummyJSON_QA_Test_Plan.docx)
 
 An IEEE 829-style test plan covering scope, objectives, test strategy, entry/exit criteria, risk analysis, and resource estimation for testing the DummyJSON API.
 
@@ -29,7 +29,7 @@ An IEEE 829-style test plan covering scope, objectives, test strategy, entry/exi
 
 ## 2. Test Cases
 
-**File:** `DummyJSON_QA_Test_Cases.xlsx`
+File: [DummyJSON_QA_Test_Cases.xlsx](./DummyJSON_QA_Test_Cases.xlsx)
 
 128 manual test cases covering the DummyJSON API's core resources (products, users, carts, posts, comments, auth), including positive, negative, and edge-case scenarios, each with clear steps, expected results, and priority.
 
@@ -37,7 +37,7 @@ An IEEE 829-style test plan covering scope, objectives, test strategy, entry/exi
 
 ## 3. Automation Package
 
-**Folder:** `DummyJSON_QA_Automation_Package/`
+Folder: [DummyJSON_QA_Automation_Package/](./DummyJSON_QA_Automation_Package/)
 
 A full regression automation suite built around the same test scope: a 104-request Postman collection, CI/CD via GitHub Actions, HTML reporting, JSON schema validation, security testing, and a k6 performance test — all version-controlled and ready to run out of the box.
 
