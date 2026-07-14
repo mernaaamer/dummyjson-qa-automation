@@ -1,4 +1,4 @@
-# DummyJSON API — QA Testing Portfolio
+# DummyJSON API 
 
 A complete, professional QA deliverable for the [DummyJSON](https://dummyjson.com) public REST API — covering manual test design, documentation, and automated regression testing end-to-end, the way a real QA engagement would be delivered.
 
