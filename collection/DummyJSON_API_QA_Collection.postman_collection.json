@@ -189,11 +189,6 @@
                   "pm.test('Status code is 401 or 403', function () {",
                   "    pm.expect([401,403]).to.include(pm.response.code);",
                   "});",
-                  "pm.cookies.jar().clear('https://dummyjson.com', function (err) {",
-                  "    if (err) {",
-                  "        console.log('Cookie clear error:', err);",
-                  "    }",
-                  "});",
                   ""
                 ],
                 "type": "text/javascript",
@@ -357,11 +352,7 @@
                   "pm.test('Status code is 401, 403, or 500 (BUG-002: API returns 500 for invalid token instead of 401/403)', function () {",
                   "    pm.expect([401, 403, 500]).to.include(pm.response.code);",
                   "});",
-                  "pm.cookies.jar().clear('https://dummyjson.com', function (err) {",
-                  "    if (err) {",
-                  "        console.log('Cookie clear error:', err);",
-                  "    }",
-                  "});"
+                  ""
                 ],
                 "type": "text/javascript",
                 "packages": {},
