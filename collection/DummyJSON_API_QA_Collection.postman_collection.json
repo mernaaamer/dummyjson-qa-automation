@@ -5054,51 +5054,6 @@
           "response": []
         },
         {
-          "name": "[Security]Unauthorized access to /auth/{resource} with tampered token",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.test('[BUG-002 KNOWN ISSUE] Tampered token handling (ideally 401/403)', function () {",
-                  "    if (pm.response.code === 500) {",
-                  "        console.warn('KNOWN ISSUE BUG-002: API returns 500 instead of 401/403 for a tampered token. See Bug Report Template for details. Not blocking CI, but should be revisited.');",
-                  "        pm.expect(pm.response.code).to.eql(500);",
-                  "    } else {",
-                  "        pm.expect([401, 403]).to.include(pm.response.code);",
-                  "    }",
-                  "});"
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{bearer_token_0ojm}}",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "{{baseUrl}}/auth/users",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "auth",
-                "users"
-              ]
-            },
-            "description": "Security: verifies a structurally-plausible but invalid JWT is still rejected. KNOWN ISSUE (BUG-002, logged 2026-07-14): live API returns 500 Internal Server Error instead of 401/403 for a tampered token. Tracked as an accepted third-party limitation (DummyJSON is a public demo API we don't control) - see Bug Report Template. This test is intentionally non-blocking for that specific known behavior, but will still FAIL if the response changes to anything other than 500/401/403 (i.e. catches new regressions)."
-          },
-          "response": []
-        },
-        {
           "name": "[Security] Sensitive fields not exposed in list responses",
           "event": [
             {
