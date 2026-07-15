@@ -1971,7 +1971,6 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test('Status code is 201 (Created)', function () {",
                   "    pm.response.to.have.status(201);",
@@ -1987,7 +1986,10 @@
                   "    pm.expect(json).to.have.property('totalProducts');",
                   "    pm.expect(json).to.have.property('totalQuantity');",
                   "});"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
