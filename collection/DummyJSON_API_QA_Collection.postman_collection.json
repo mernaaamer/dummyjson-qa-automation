@@ -5052,12 +5052,11 @@
           "response": []
         },
         {
-          "name": "[Security][BUG-002] Unauthorized access to /auth/{resource} with tampered token",
+          "name": "[Security]Unauthorized access to /auth/{resource} with tampered token",
           "event": [
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test('[BUG-002 KNOWN ISSUE] Tampered token handling (ideally 401/403)', function () {",
                   "    if (pm.response.code === 500) {",
@@ -5067,7 +5066,10 @@
                   "        pm.expect([401, 403]).to.include(pm.response.code);",
                   "    }",
                   "});"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
